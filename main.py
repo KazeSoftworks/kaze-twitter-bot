@@ -20,7 +20,7 @@ async def on_message(message):
         return
 
     # Define la regular expression para que detecte URLs de Twitter y X 
-    url_pattern = re.compile(r'(https?://(?:www\.)?(?:x\.com)/(?!home)[^\s/]*)')
+    url_pattern = re.compile(r'(https?://(?:www\.)?(?:twitter\.com|x\.com)/\S+)')
 
     # Encuentra las coincidencias en el mensaje
     matches = url_pattern.findall(message.content)
